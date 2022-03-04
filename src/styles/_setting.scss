@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+$breakpoints: (
+    "phone": 375px,
+    "tablet": 768px,
+    "desktop": 1440px,
+);
+
+@mixin media-min($_key) {
+  @media screen and (min-width: map-get($breakpoints,$_key)) {
+    &{ @content; }
+  }
+}
+
+$font: 'Spartan', sans-serif;
+$medium: 500;
+$bold: 700;

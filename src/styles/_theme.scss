@@ -1,0 +1,11 @@
+:root {
+  --Background: #F8F8FB;
+  --Navbar: #373B53;
+  --Element: #FFFFFF;
+}
+    
+[data-theme='dark'] {
+  --Background: #141625;
+  --Navbar: #1E2139;
+  --Element: #1E2139;
+}
