@@ -1,9 +1,36 @@
+import { createContext, useContext, useState } from "react";
+import Navbar from "./components/Navbar";
 
+interface IThemeContext {
+  theme: string;
+  toggleTheme?: (val:string) => void;
+}
+
+const defaultState = {
+  theme: "light",
+}
+export const ThemeContext = createContext<IThemeContext>(defaultState);
 const App = () => {
+  const thisContext = useContext(ThemeContext);
+  const [theme,setTheme] = useState(thisContext.theme);
+  const toggleTheme = (val:string):void => {
+      setTheme(val)
+  }
+  
   return (
-    <div>
-      bismillah
-    </div>
+    <ThemeContext.Provider 
+      value={{
+        theme,
+        toggleTheme
+      }}
+    >
+      <div data-theme={theme} className="root">
+        <Navbar/>
+        <div className="container">
+          Bismillah
+        </div>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

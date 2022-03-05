@@ -1,0 +1,29 @@
+.root{
+  max-width: 767px;
+  min-height: 100vh;
+  background-color: var(--Background);
+  color: var(--Text);
+
+  @include media-min("tablet"){
+    max-width: 1439px;
+  }
+
+  @include media-min("desktop"){
+    max-width: none;
+  }
+}
+
+.container{
+  width: 375px;
+  min-height: 100vh;
+  margin: auto;
+  border: 1px solid red;
+
+  @include media-min("tablet"){
+    width: 768px;
+  }
+
+  @include media-min("desktop"){
+    width: 1440px;
+  }
+}
