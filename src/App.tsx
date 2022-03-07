@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import Invoice from "./components/Invoice";
 import Navbar from "./components/Navbar";
 
 interface IThemeContext {
@@ -27,7 +28,7 @@ const App = () => {
       <div data-theme={theme} className="root">
         <Navbar/>
         <div className="container">
-          Bismillah
+          <Invoice />
         </div>
       </div>
     </ThemeContext.Provider>

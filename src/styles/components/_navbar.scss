@@ -2,6 +2,7 @@ nav{
   background-color: var(--Navbar);
   display: flex;
   justify-content: space-between;
+  height: 72px;
 }
 
 .nav-logo{
@@ -21,13 +22,20 @@ nav{
 }
 
 .toggle-container{
-  svg{
+  .toggle-moon svg{
     margin: 24px;
     fill: #7E88C3;
   }
+  .toggle-sun svg{
+    margin: 24px;
+    fill: #858BB2;
+  }
   &:hover{
     cursor: pointer;
-    svg{
+    .toggle-moon svg{
+      fill: #DFE3FA;
+    }
+    .toggle-sun svg{
       fill: #DFE3FA;
     }
   }

@@ -2,10 +2,36 @@
   --Background: #F8F8FB;
   --Navbar: #373B53;
   --Element: #FFFFFF;
+  --Textcolor-1: #0C0E16;
+  --Textcolor-2: #888EB0;
+  --Textcolor-3: #FFFFFF;
+  --Btn-default: #7C5DFA;
+  --Btn-default-hover: #9277FF;
+  --Btn-edit: #F9FAFE;
+  --Btn-edit-hover: #DFE3FA;
+  --Btn-draft:#373B53;
+  --Btn-draft-hover:#0C0E16;
+  --Btn-delete:#EC5757;
+  --Btn-delete-hover:#FF9797;
+  --Btn-item:#F9FAFE;
+  --Btn-item-hover:#DFE3FA;
 }
-    
+
 [data-theme='dark'] {
   --Background: #141625;
   --Navbar: #1E2139;
   --Element: #1E2139;
+  --Textcolor-1: #FFFFFF;
+  --Textcolor-2: #DFE3FA;
+  --Textcolor-3: #FFFFFF;
+  --Btn-default: #7C5DFA;
+  --Btn-default-hover: #9277FF;
+  --Btn-edit: #252945;
+  --Btn-edit-hover: #FFFFFF;
+  --Btn-draft:#373B53;
+  --Btn-draft-hover:#1E2139;
+  --Btn-delete:#EC5757;
+  --Btn-delete-hover:#FF9797;
+  --Btn-item:#F9FAFE;
+  --Btn-item-hover:#DFE3FA;
 }
