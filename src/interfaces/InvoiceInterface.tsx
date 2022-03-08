@@ -1,5 +1,5 @@
 
-interface Adress {
+interface Address {
   street: string,
   city: string,
   postCode: string,
@@ -14,7 +14,7 @@ interface Item {
 }
 
 export interface Invoice {
-  clientAdress: Adress,
+  clientAddress: Address,
   clientEmail: string,
   clientName: string,
   createdAt: string,
@@ -23,7 +23,7 @@ export interface Invoice {
   items: Item[],
   paymentDue: string,
   paymentTerms: number,
-  senderAddress: Adress,
+  senderAddress: Address,
   status: string,
   total: number
 }

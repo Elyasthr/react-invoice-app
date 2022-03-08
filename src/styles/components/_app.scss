@@ -16,7 +16,8 @@
 .container{
   width: 375px;
   margin: auto;
-
+  padding-bottom: 30px;
+  position: relative;
   @include media-min("tablet"){
     width: 768px;
   }
