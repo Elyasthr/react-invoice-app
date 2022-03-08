@@ -29,7 +29,7 @@ const Invoices = () => {
     <>
       <div className="invoice-container">
         <div>
-          <h1>Invoices</h1>
+          <h1 className="invoice">Invoices</h1>
           {
             invoiceData 
               ? <p className="body-1">{invoiceData.length} Invoices</p>
