@@ -4,6 +4,7 @@
   width: 375px;
   height: 100%;
   margin: auto;
+  padding: 0 24px ;
   border: 1px solid blue;
   background-color: var(--Background);
 }
@@ -20,7 +21,66 @@
 }
 
 .invoice-body{
+  min-height: 675px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 8px;
   margin-top: 16px;
+  padding:24px;
   background-color: var(--Element);
+}
+
+.invoice-middle{
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.invoice-middle-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 41px;
+  p{
+    margin-bottom: 12px;
+  }
+}
+
+.invoice-middle-right{
+  h3{
+    margin: 12px 0 8px 0;
+  }
+}
+
+.invoice-body-note{
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-body-note-header{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 24px 24px 0 24px;
+  background-color: var(--Note-2);
+}
+
+.invoice-note-detail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  h4{
+    margin-top: 8px;
+  }
+}
+
+.invoice-body-note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 24px;
+  background-color: var(--Note);
 }

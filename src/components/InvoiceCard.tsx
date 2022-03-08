@@ -22,7 +22,7 @@ const InvoiceCard = ({invoice}: {invoice: Invoice}) => {
           </div>  
         </div>  
       </li>
-      
+
       {
         viewInvoice && 
           (
