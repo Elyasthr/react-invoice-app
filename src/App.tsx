@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import Invoices from "./components/Invoices";
 import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import InvoiceView from "./components/InvoiceView";
 
 interface IThemeContext {
   theme: string;
@@ -25,12 +27,18 @@ const App = () => {
         toggleTheme
       }}
     >
-      <div data-theme={theme} className="root">
-        <Navbar/>
-        <div className="container">
-          <Invoices/>
+      <BrowserRouter>
+        <div data-theme={theme} className="root">
+          <Navbar/>
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Invoices/>}/>
+              <Route path="/view" element={<InvoiceView />}/>
+              <Route path="/*" element={<Invoices/>}/>
+            </Routes>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     </ThemeContext.Provider>
   );
 };
