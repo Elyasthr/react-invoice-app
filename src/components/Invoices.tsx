@@ -10,6 +10,8 @@ const Invoices = () => {
   const [isPlayed,setIsplayed] = useState(false);
 
   useEffect(()=>{
+    window.scrollTo(0, 0);
+    
     if(!isPlayed){
       axios
         .get('http://localhost:3002/invoices')
@@ -21,7 +23,7 @@ const Invoices = () => {
           console.log(err)
         })
       setIsplayed(true)
-    }
+    } 
   },[isPlayed])
   
 

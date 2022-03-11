@@ -1,15 +1,21 @@
+import { useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Invoice } from "../interfaces/InvoiceInterface";
 
 const InvoiceView = () => {
   const location = useLocation();
   const {invoice} = location.state as {invoice: Invoice};
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
+
   return (
     <>
       <div className="invoice-view-container">
 
         <NavLink end to="/">
-          <button>back</button>
+          <button className="btn-pers"><span>&lt;</span>Go back</button>
         </NavLink>
 
         <div className="status-container">
@@ -63,7 +69,7 @@ const InvoiceView = () => {
                 invoice.items.map((item)=>(
                   <div key={item.name} className="invoice-note-detail">
                     <div>
-                      <h3>{item.name}</h3>
+                      <h4>{item.name}</h4>
                       <h4>{item.quantity} x £ {item.price}</h4>
                     </div>
                     <h3>£ {item.total}</h3>
@@ -72,11 +78,16 @@ const InvoiceView = () => {
               }
             </div>
             <div className="invoice-body-note-footer">
-              <p className="body-1">Amount Due</p>
+              <p className="body-2">Amount Due</p>
               <h1>£ {invoice.total}</h1>
             </div>
           </div>
         </div>
+      </div>
+      <div className="btn-container-2">
+        <button className="btn-edit">Edit</button>
+        <button className="btn-delete">Delete</button>
+        <button className="btn-paid">Mark as Paid</button>
       </div>
     </>
   );
