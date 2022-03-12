@@ -3,6 +3,7 @@ import Invoices from "./components/Invoices";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import InvoiceView from "./components/InvoiceView";
+import InvoiceForm from "./components/InvoiceForm";
 
 interface IThemeContext {
   theme: string;
@@ -34,6 +35,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Invoices/>}/>
               <Route path="/view" element={<InvoiceView />}/>
+              <Route path="/form" element={<InvoiceForm />}/>
               <Route path="/*" element={<Invoices/>}/>
             </Routes>
           </div>

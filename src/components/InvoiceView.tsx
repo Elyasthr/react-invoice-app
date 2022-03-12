@@ -85,7 +85,9 @@ const InvoiceView = () => {
         </div>
       </div>
       <div className="btn-container-2">
-        <button className="btn-edit">Edit</button>
+        <NavLink end to='/form' state={{invoice}}>
+          <button className="btn-edit">Edit</button>
+        </NavLink>
         <button className="btn-delete">Delete</button>
         <button className="btn-paid">Mark as Paid</button>
       </div>

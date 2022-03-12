@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import InvoiceCard from "./InvoiceCard";
 import InvoiceEmpty from "./InvoiceEmpty";
 import { Invoice } from "../interfaces/InvoiceInterface";
+import { NavLink } from "react-router-dom";
 
 
 const Invoices = () => {
@@ -46,12 +47,14 @@ const Invoices = () => {
             <option value="pending">Pending</option>
             <option value="paid">Paid</option>
           </select>
-          <button className="btn-invoice">
-            <div className="svg-container">
-              <img src="./assets/icon-plus.svg" alt="plus button"/>
-            </div>
-            New
-          </button>
+          <NavLink end to="/form">
+            <button className="btn-invoice">
+              <div className="svg-container">
+                <img src="./assets/icon-plus.svg" alt="plus button"/>
+              </div>
+              New
+            </button>
+          </NavLink>
         </div>
       </div>
 
