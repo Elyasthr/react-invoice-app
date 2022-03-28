@@ -25,8 +25,13 @@ const InvoiceForm = () => {
                 <h1>New Invoice</h1>
               </>
         }
-        
-        <h1>Le Formulaire</h1>
+
+        <form>
+          <h1>Bill From</h1>
+          <h1>Bill To</h1>
+          <h1>Item List</h1>
+
+        </form>
       </div>
 
       {

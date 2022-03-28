@@ -17,7 +17,6 @@ const Invoices = () => {
       axios
         .get('http://localhost:3002/invoices')
         .then((res)=>{
-          console.log(res.data)
           setInvoiceData(res.data)
         })
         .catch((err)=>{
